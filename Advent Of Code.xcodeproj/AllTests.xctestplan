@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "7215A6C5-3C84-4D52-B645-FB666E494578",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Advent Of Code.xcodeproj",
+        "identifier" : "2D4A0BF4239478AA001D0A6C",
+        "name" : "AOCKitTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Advent Of Code.xcodeproj",
+        "identifier" : "2D4A0C1B2394794E001D0A6C",
+        "name" : "Day1Tests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -47,6 +47,7 @@
 		2D4A0C212394794E001D0A6C /* Day1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1Tests.swift; sourceTree = "<group>"; };
 		2D4A0C232394794E001D0A6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D4A0C2B2394797E001D0A6C /* Day1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day1.swift; sourceTree = "<group>"; };
+		2D4A0C2E23948122001D0A6C /* AllTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = AllTests.xctestplan; path = "Advent Of Code.xcodeproj/AllTests.xctestplan"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +87,7 @@
 		2D4A0BD523947891001D0A6C = {
 			isa = PBXGroup;
 			children = (
+				2D4A0C2E23948122001D0A6C /* AllTests.xctestplan */,
 				2D4A0BEE239478A9001D0A6C /* AOCKit */,
 				2D4A0BF9239478AA001D0A6C /* AOCKitTests */,
 				2D4A0C152394794D001D0A6C /* Day1 */,

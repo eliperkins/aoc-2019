@@ -1,0 +1,11 @@
+name: Test
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run Tests
+      run: xcodebuild -project "Advent Of Code.xcodeproj" -scheme AOCKit test -testPlan AllTests | xcpretty
