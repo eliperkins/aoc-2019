@@ -8,4 +8,10 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run Tests
-      run: xcodebuild -project "Advent Of Code.xcodeproj" -scheme AOCKit test -testPlan AllTests | xcpretty
+      run: >-
+        xcodebuild -project "Advent Of Code.xcodeproj"
+          -scheme AOCKit
+          test
+          -testPlan AllTests
+          -resultBundlePath .build/AllTests.xcresult |
+          xcpretty
