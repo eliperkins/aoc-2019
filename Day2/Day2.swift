@@ -15,7 +15,12 @@ public enum Opcode: Int {
 }
 
 public func process(opcodes: String, replacingMemoryWith values: (Int, Int)? = nil) -> String {
-    let stringCodes = Array(opcodes.trimmingCharacters(in: .whitespacesAndNewlines).split(separator: ",").map(String.init))
+    let stringCodes = Array(
+        opcodes
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+            .split(separator: ",")
+            .map(String.init)
+    )
     let intCodes: [Int] = stringCodes.compactMap(Int.init)
     assert(stringCodes.count == intCodes.count, "Failed to convert all string values to integers")
 
@@ -59,12 +64,16 @@ public func process(opcodes: String, replacingMemoryWith values: (Int, Int)? = n
         }
     }
 
-
     return returnValues.map(String.init).joined(separator: ",")
 }
 
 public func getInitialOpcodeValue(from opcodes: String) -> Int {
-    let stringCodes = Array(opcodes.trimmingCharacters(in: .whitespacesAndNewlines).split(separator: ",").map(String.init))
+    let stringCodes = Array(
+        opcodes
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+            .split(separator: ",")
+            .map(String.init)
+    )
     let intCodes: [Int] = stringCodes.compactMap(Int.init)
     guard let value = intCodes.first else { fatalError("Failed to get initial value") }
     return value
