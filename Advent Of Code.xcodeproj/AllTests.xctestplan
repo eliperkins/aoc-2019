@@ -32,6 +32,13 @@
         "identifier" : "2D4A0C3B23956792001D0A6C",
         "name" : "Day2Tests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Advent Of Code.xcodeproj",
+        "identifier" : "2DF1B67023969AFE002C483D",
+        "name" : "Day3Tests"
+      }
     }
   ],
   "version" : 1
