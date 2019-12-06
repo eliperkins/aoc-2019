@@ -7,12 +7,7 @@
 //
 
 import Foundation
-
-public enum Opcode: Int {
-    case addition = 1
-    case multiplication = 2
-    case halt = 99
-}
+import AOCKit
 
 public func process(opcodes: String, replacingMemoryWith values: (Int, Int)? = nil) -> String {
     let stringCodes = Array(
@@ -31,40 +26,8 @@ public func process(opcodes: String, replacingMemoryWith values: (Int, Int)? = n
         returnValues[2] = values.1
     }
 
-    var instructionPointer = 0
-
-    while instructionPointer < intCodes.endIndex {
-        let memoryAtAddress = returnValues[instructionPointer]
-        guard let opcode = Opcode(rawValue: memoryAtAddress) else { fatalError("Encountered unknown opcode") }
-        switch opcode {
-        case .addition:
-            let lhsAddress = returnValues[instructionPointer.advanced(by: 1)]
-            let rhsAddress = returnValues[instructionPointer.advanced(by: 2)]
-            let outputIndex = instructionPointer.advanced(by: 3)
-            let outputAddress = returnValues[outputIndex]
-
-            let lhs = returnValues[lhsAddress]
-            let rhs = returnValues[rhsAddress]
-            returnValues[outputAddress] = lhs + rhs
-
-            instructionPointer = outputIndex.advanced(by: 1)
-        case .multiplication:
-            let lhsAddress = returnValues[instructionPointer.advanced(by: 1)]
-            let rhsAddress = returnValues[instructionPointer.advanced(by: 2)]
-            let outputIndex = instructionPointer.advanced(by: 3)
-            let outputAddress = returnValues[outputIndex]
-
-            let lhs = returnValues[lhsAddress]
-            let rhs = returnValues[rhsAddress]
-            returnValues[outputAddress] = lhs * rhs
-
-            instructionPointer = outputIndex.advanced(by: 1)
-        case .halt:
-            instructionPointer = intCodes.endIndex
-        }
-    }
-
-    return returnValues.map(String.init).joined(separator: ",")
+    let program = returnValues.map(String.init).joined(separator: ",")
+    return execute(program: program)
 }
 
 public func getInitialOpcodeValue(from opcodes: String) -> Int {
