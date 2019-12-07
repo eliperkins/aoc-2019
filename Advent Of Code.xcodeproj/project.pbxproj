@@ -11,6 +11,12 @@
 		2D0D4581239812BA00DAE756 /* Day4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D4580239812BA00DAE756 /* Day4Tests.swift */; };
 		2D0D4583239812BA00DAE756 /* Day4.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D0D4575239812BA00DAE756 /* Day4.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D0D458B239812CB00DAE756 /* Day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D458A239812CB00DAE756 /* Day4.swift */; };
+		2D0D45A1239AB16500DAE756 /* Day5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D0D4598239AB16400DAE756 /* Day5.framework */; };
+		2D0D45A6239AB16500DAE756 /* Day5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D45A5239AB16500DAE756 /* Day5Tests.swift */; };
+		2D0D45A8239AB16500DAE756 /* Day5.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D0D459A239AB16400DAE756 /* Day5.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D0D45B0239AB17600DAE756 /* Day5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D45AF239AB17600DAE756 /* Day5.swift */; };
+		2D0D45B2239AB1CC00DAE756 /* Opcodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D45B1239AB1CC00DAE756 /* Opcodes.swift */; };
+		2D0D45B4239AB4AE00DAE756 /* OpcodesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D45B3239AB4AE00DAE756 /* OpcodesTests.swift */; };
 		2D4A0BF6239478AA001D0A6C /* AOCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D4A0BED239478A9001D0A6C /* AOCKit.framework */; };
 		2D4A0BFB239478AA001D0A6C /* AOCKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4A0BFA239478AA001D0A6C /* AOCKitTests.swift */; };
 		2D4A0BFD239478AA001D0A6C /* AOCKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D4A0BEF239478A9001D0A6C /* AOCKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,6 +41,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2D0D4572239812BA00DAE756;
 			remoteInfo = Day4;
+		};
+		2D0D45A2239AB16500DAE756 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D4A0BD623947891001D0A6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D0D4597239AB16400DAE756;
+			remoteInfo = Day5;
+		};
+		2D0D45B5239AB5CE00DAE756 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D4A0BD623947891001D0A6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D4A0BEC239478A9001D0A6C;
+			remoteInfo = AOCKit;
 		};
 		2D4A0BF7239478AA001D0A6C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -74,6 +94,15 @@
 		2D0D4580239812BA00DAE756 /* Day4Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4Tests.swift; sourceTree = "<group>"; };
 		2D0D4582239812BA00DAE756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D0D458A239812CB00DAE756 /* Day4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
+		2D0D4598239AB16400DAE756 /* Day5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Day5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D0D459A239AB16400DAE756 /* Day5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Day5.h; sourceTree = "<group>"; };
+		2D0D459B239AB16400DAE756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D0D45A0239AB16500DAE756 /* Day5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Day5Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D0D45A5239AB16500DAE756 /* Day5Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day5Tests.swift; sourceTree = "<group>"; };
+		2D0D45A7239AB16500DAE756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D0D45AF239AB17600DAE756 /* Day5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day5.swift; sourceTree = "<group>"; };
+		2D0D45B1239AB1CC00DAE756 /* Opcodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opcodes.swift; sourceTree = "<group>"; };
+		2D0D45B3239AB4AE00DAE756 /* OpcodesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpcodesTests.swift; sourceTree = "<group>"; };
 		2D4A0BED239478A9001D0A6C /* AOCKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AOCKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D4A0BEF239478A9001D0A6C /* AOCKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOCKit.h; sourceTree = "<group>"; };
 		2D4A0BF0239478A9001D0A6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -117,6 +146,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D0D457C239812BA00DAE756 /* Day4.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D0D4595239AB16400DAE756 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D0D459D239AB16500DAE756 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D0D45A1239AB16500DAE756 /* Day5.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +246,25 @@
 			path = Day4Tests;
 			sourceTree = "<group>";
 		};
+		2D0D4599239AB16400DAE756 /* Day5 */ = {
+			isa = PBXGroup;
+			children = (
+				2D0D459A239AB16400DAE756 /* Day5.h */,
+				2D0D45AF239AB17600DAE756 /* Day5.swift */,
+				2D0D459B239AB16400DAE756 /* Info.plist */,
+			);
+			path = Day5;
+			sourceTree = "<group>";
+		};
+		2D0D45A4239AB16500DAE756 /* Day5Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2D0D45A5239AB16500DAE756 /* Day5Tests.swift */,
+				2D0D45A7239AB16500DAE756 /* Info.plist */,
+			);
+			path = Day5Tests;
+			sourceTree = "<group>";
+		};
 		2D4A0BD523947891001D0A6C = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +279,8 @@
 				2DF1B67523969AFE002C483D /* Day3Tests */,
 				2D0D4574239812BA00DAE756 /* Day4 */,
 				2D0D457F239812BA00DAE756 /* Day4Tests */,
+				2D0D4599239AB16400DAE756 /* Day5 */,
+				2D0D45A4239AB16500DAE756 /* Day5Tests */,
 				2D4A0BDF23947891001D0A6C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -233,6 +298,8 @@
 				2DF1B67123969AFE002C483D /* Day3Tests.xctest */,
 				2D0D4573239812BA00DAE756 /* Day4.framework */,
 				2D0D457B239812BA00DAE756 /* Day4Tests.xctest */,
+				2D0D4598239AB16400DAE756 /* Day5.framework */,
+				2D0D45A0239AB16500DAE756 /* Day5Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -242,6 +309,7 @@
 			children = (
 				2D4A0BEF239478A9001D0A6C /* AOCKit.h */,
 				2D4A0BF0239478A9001D0A6C /* Info.plist */,
+				2D0D45B1239AB1CC00DAE756 /* Opcodes.swift */,
 			);
 			path = AOCKit;
 			sourceTree = "<group>";
@@ -251,6 +319,7 @@
 			children = (
 				2D4A0BFA239478AA001D0A6C /* AOCKitTests.swift */,
 				2D4A0BFC239478AA001D0A6C /* Info.plist */,
+				2D0D45B3239AB4AE00DAE756 /* OpcodesTests.swift */,
 			);
 			path = AOCKitTests;
 			sourceTree = "<group>";
@@ -323,6 +392,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2D0D4593239AB16400DAE756 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D0D45A8239AB16500DAE756 /* Day5.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2D4A0BE8239478A9001D0A6C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -392,6 +469,42 @@
 			name = Day4Tests;
 			productName = Day4Tests;
 			productReference = 2D0D457B239812BA00DAE756 /* Day4Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2D0D4597239AB16400DAE756 /* Day5 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D0D45AD239AB16500DAE756 /* Build configuration list for PBXNativeTarget "Day5" */;
+			buildPhases = (
+				2D0D4593239AB16400DAE756 /* Headers */,
+				2D0D4594239AB16400DAE756 /* Sources */,
+				2D0D4595239AB16400DAE756 /* Frameworks */,
+				2D0D4596239AB16400DAE756 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Day5;
+			productName = Day5;
+			productReference = 2D0D4598239AB16400DAE756 /* Day5.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2D0D459F239AB16500DAE756 /* Day5Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D0D45AE239AB16500DAE756 /* Build configuration list for PBXNativeTarget "Day5Tests" */;
+			buildPhases = (
+				2D0D459C239AB16500DAE756 /* Sources */,
+				2D0D459D239AB16500DAE756 /* Frameworks */,
+				2D0D459E239AB16500DAE756 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D0D45A3239AB16500DAE756 /* PBXTargetDependency */,
+			);
+			name = Day5Tests;
+			productName = Day5Tests;
+			productReference = 2D0D45A0239AB16500DAE756 /* Day5Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		2D4A0BEC239478A9001D0A6C /* AOCKit */ = {
@@ -478,6 +591,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2D0D45B6239AB5CE00DAE756 /* PBXTargetDependency */,
 			);
 			name = Day2;
 			productName = Day2;
@@ -555,8 +669,16 @@
 					2D0D457A239812BA00DAE756 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
+					2D0D4597239AB16400DAE756 = {
+						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
+					};
+					2D0D459F239AB16500DAE756 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
 					2D4A0BEC239478A9001D0A6C = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 					2D4A0BF4239478AA001D0A6C = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -607,6 +729,8 @@
 				2DF1B67023969AFE002C483D /* Day3Tests */,
 				2D0D4572239812BA00DAE756 /* Day4 */,
 				2D0D457A239812BA00DAE756 /* Day4Tests */,
+				2D0D4597239AB16400DAE756 /* Day5 */,
+				2D0D459F239AB16500DAE756 /* Day5Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -620,6 +744,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2D0D4579239812BA00DAE756 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D0D4596239AB16400DAE756 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D0D459E239AB16500DAE756 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -701,10 +839,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2D0D4594239AB16400DAE756 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D0D45B0239AB17600DAE756 /* Day5.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D0D459C239AB16500DAE756 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D0D45A6239AB16500DAE756 /* Day5Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2D4A0BE9239478A9001D0A6C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D0D45B2239AB1CC00DAE756 /* Opcodes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +868,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D4A0BFB239478AA001D0A6C /* AOCKitTests.swift in Sources */,
+				2D0D45B4239AB4AE00DAE756 /* OpcodesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -771,6 +927,16 @@
 			isa = PBXTargetDependency;
 			target = 2D0D4572239812BA00DAE756 /* Day4 */;
 			targetProxy = 2D0D457D239812BA00DAE756 /* PBXContainerItemProxy */;
+		};
+		2D0D45A3239AB16500DAE756 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D0D4597239AB16400DAE756 /* Day5 */;
+			targetProxy = 2D0D45A2239AB16500DAE756 /* PBXContainerItemProxy */;
+		};
+		2D0D45B6239AB5CE00DAE756 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D4A0BEC239478A9001D0A6C /* AOCKit */;
+			targetProxy = 2D0D45B5239AB5CE00DAE756 /* PBXContainerItemProxy */;
 		};
 		2D4A0BF8239478AA001D0A6C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -881,6 +1047,97 @@
 					"@loader_path/../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.eliperkins.Day4Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2D0D45A9239AB16500DAE756 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Day5/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eliperkins.Day5;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2D0D45AA239AB16500DAE756 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Day5/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eliperkins.Day5;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2D0D45AB239AB16500DAE756 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Day5Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eliperkins.Day5Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2D0D45AC239AB16500DAE756 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Day5Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.eliperkins.Day5Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -1002,6 +1259,7 @@
 		2D4A0BFF239478AA001D0A6C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1021,6 +1279,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.eliperkins.AOCKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1030,6 +1289,7 @@
 		2D4A0C00239478AA001D0A6C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1058,6 +1318,7 @@
 		2D4A0C02239478AA001D0A6C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
@@ -1076,6 +1337,7 @@
 		2D4A0C03239478AA001D0A6C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
@@ -1389,6 +1651,24 @@
 			buildConfigurations = (
 				2D0D4586239812BA00DAE756 /* Debug */,
 				2D0D4587239812BA00DAE756 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D0D45AD239AB16500DAE756 /* Build configuration list for PBXNativeTarget "Day5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D0D45A9239AB16500DAE756 /* Debug */,
+				2D0D45AA239AB16500DAE756 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D0D45AE239AB16500DAE756 /* Build configuration list for PBXNativeTarget "Day5Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D0D45AB239AB16500DAE756 /* Debug */,
+				2D0D45AC239AB16500DAE756 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
