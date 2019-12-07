@@ -5,6 +5,9 @@
 //  Created by Eli Perkins on 12/6/19.
 //  Copyright © 2019 eliperkins. All rights reserved.
 //
+// swiftlint:disable cyclomatic_complexity
+// swiftlint:disable function_body_length
+// swiftlint:disable function_parameter_count
 
 import Foundation
 
