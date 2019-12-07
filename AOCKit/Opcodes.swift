@@ -13,6 +13,10 @@ public enum Opcode: Int {
     case multiplication = 2
     case input = 3
     case output = 4
+    case jumpIfTrue = 5
+    case jumpIfFalse = 6
+    case lessThan = 7
+    case equals = 8
     case halt = 99
 }
 
@@ -26,20 +30,57 @@ public enum Instruction {
     case multiplication(lhs: Int, rhs: Int, pointer: Int)
     case input(pointer: Int)
     case output(pointer: Int)
+
+    case jumpIfTrue(test: Int, pointer: Int)
+    case jumpIfFalse(test: Int, pointer: Int)
+    case lessThan(lhs: Int, rhs: Int, pointer: Int)
+    case equals(lhs: Int, rhs: Int, pointer: Int)
+
     case halt
 }
 
-func execute(instruction: Instruction, with memory: inout [Int], shouldContinue: inout Bool) {
+func execute(
+    instruction: Instruction,
+    instructionPointer: inout Int,
+    with memory: inout [Int],
+    input: Int,
+    output: inout Int,
+    shouldContinue: inout Bool
+) {
     switch instruction {
     case .addition(let lhs, let rhs, let pointer):
         memory[pointer] = lhs + rhs
     case .multiplication(let lhs, let rhs, let pointer):
         memory[pointer] = lhs * rhs
     case .input(let pointer):
-        memory[pointer] = 1
+        memory[pointer] = input
     case .output(let pointer):
-        dump(pointer)
-//        dump(memory[pointer])
+        output = pointer
+        dump(output)
+    case .jumpIfTrue(let test, let pointer):
+        if test != 0 {
+            instructionPointer = pointer
+        } else {
+            instructionPointer = instructionPointer.advanced(by: 3)
+        }
+    case .jumpIfFalse(let test, let pointer):
+        if test == 0 {
+            instructionPointer = pointer
+        } else {
+            instructionPointer = instructionPointer.advanced(by: 3)
+        }
+    case .lessThan(let lhs, let rhs, let pointer):
+        if lhs < rhs {
+            memory[pointer] = 1
+        } else {
+            memory[pointer] = 0
+        }
+    case .equals(let lhs, let rhs, let pointer):
+        if lhs == rhs {
+            memory[pointer] = 1
+        } else {
+            memory[pointer] = 0
+        }
     case .halt:
         shouldContinue = false
     }
@@ -115,10 +156,61 @@ func process(value: Int, instructionPointer: inout Int, from memory: [Int]) -> I
         instructionPointer = instructionPointer.advanced(by: 2)
 
         return .output(pointer: pointer)
+    case .jumpIfTrue:
+        let parameterModes = getParameterModes(from: remaining, length: 2)
+        let valuePointer = instructionPointer.advanced(by: 1)
+        let valueMode = parameterModes[parameterModes.startIndex]
+        let value = getValue(with: valueMode, address: valuePointer, from: memory)
+
+        let pointerMode = parameterModes[parameterModes.startIndex + 1]
+        let pointer = getValue(with: pointerMode, address: valuePointer.advanced(by: 1), from: memory)
+
+        return .jumpIfTrue(test: value, pointer: pointer)
+    case .jumpIfFalse:
+        let parameterModes = getParameterModes(from: remaining, length: 2)
+        let valuePointer = instructionPointer.advanced(by: 1)
+        let valueMode = parameterModes[parameterModes.startIndex]
+        let value = getValue(with: valueMode, address: valuePointer, from: memory)
+
+        let pointerMode = parameterModes[parameterModes.startIndex + 1]
+        let pointer = getValue(with: pointerMode, address: valuePointer.advanced(by: 1), from: memory)
+
+        return .jumpIfFalse(test: value, pointer: pointer)
+    case .lessThan:
+        let parameterModes = getParameterModes(from: remaining, length: 3)
+        let lhsMode = parameterModes[parameterModes.startIndex]
+        let rhsMode = parameterModes[parameterModes.startIndex + 1]
+
+        let lhsAddress = instructionPointer.advanced(by: 1)
+        let rhsAddress = instructionPointer.advanced(by: 2)
+        let outputIndex = instructionPointer.advanced(by: 3)
+
+        let outputAddress = memory[outputIndex]
+        let lhs = getValue(with: lhsMode, address: lhsAddress, from: memory)
+        let rhs = getValue(with: rhsMode, address: rhsAddress, from: memory)
+
+        instructionPointer = outputIndex.advanced(by: 1)
+
+        return .lessThan(lhs: lhs, rhs: rhs, pointer: outputAddress)
+    case .equals:
+        let parameterModes = getParameterModes(from: remaining, length: 3)
+        let lhsMode = parameterModes[parameterModes.startIndex]
+        let rhsMode = parameterModes[parameterModes.startIndex + 1]
+
+        let lhsAddress = instructionPointer.advanced(by: 1)
+        let rhsAddress = instructionPointer.advanced(by: 2)
+        let outputIndex = instructionPointer.advanced(by: 3)
+
+        let outputAddress = memory[outputIndex]
+        let lhs = getValue(with: lhsMode, address: lhsAddress, from: memory)
+        let rhs = getValue(with: rhsMode, address: rhsAddress, from: memory)
+
+        instructionPointer = outputIndex.advanced(by: 1)
+
+        return .equals(lhs: lhs, rhs: rhs, pointer: outputAddress)
     case .halt:
         return .halt
     }
-
 }
 
 func createMemory(from input: String) -> [Int] {
@@ -133,7 +225,8 @@ func createMemory(from input: String) -> [Int] {
     return intCodes
 }
 
-public func execute(program: String) -> String {
+@discardableResult
+public func execute(program: String, input: Int = 1, output: inout Int) -> String {
     let stringCodes = Array(
         program
            .trimmingCharacters(in: .whitespacesAndNewlines)
@@ -152,7 +245,14 @@ public func execute(program: String) -> String {
             from: memory
         )
         if let instruction = instruction {
-            execute(instruction: instruction, with: &memory, shouldContinue: &shouldContinue)
+            execute(
+                instruction: instruction,
+                instructionPointer: &instructionPointer,
+                with: &memory,
+                input: input,
+                output: &output,
+                shouldContinue: &shouldContinue
+            )
         } else {
             instructionPointer = instructionPointer.advanced(by: 1)
         }

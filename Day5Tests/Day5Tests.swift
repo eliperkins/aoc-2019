@@ -13,12 +13,64 @@ import AOCKit
 class Day5Tests: XCTestCase {
 
     func testExample() {
-        XCTAssertEqual(execute(program: "1002,4,3,4,33"), "1002,4,3,4,99")
+        var output = 0
+        XCTAssertEqual(execute(program: "1002,4,3,4,33", input: 1, output: &output), "1002,4,3,4,99")
     }
 
     func testPartOneAnswer() {
-        // prints: "15508323"
-        XCTAssertEqual(execute(program: testInput), testOutput)
+        var output = 0
+        XCTAssertEqual(execute(program: testInput, input: 1, output: &output), testOutput)
+        XCTAssertEqual(output, 15508323)
+    }
+
+    func testPartTwoEqualOrLess() {
+        var output = 0
+
+        let equalToEight = "3,9,8,9,10,9,4,9,99,-1,8"
+        execute(program: equalToEight, input: 8, output: &output)
+        XCTAssertEqual(output, 1)
+        execute(program: equalToEight, input: 2, output: &output)
+        XCTAssertEqual(output, 0)
+
+        let lessThanEight = "3,9,7,9,10,9,4,9,99,-1,8"
+        execute(program: lessThanEight, input: 8, output: &output)
+        XCTAssertEqual(output, 0)
+        execute(program: lessThanEight, input: 2, output: &output)
+        XCTAssertEqual(output, 1)
+
+        let equalToEightPosition = "3,3,1108,-1,8,3,4,3,99"
+        execute(program: equalToEightPosition, input: 8, output: &output)
+        XCTAssertEqual(output, 1)
+        execute(program: equalToEightPosition, input: 2, output: &output)
+        XCTAssertEqual(output, 0)
+
+        let lessThanEightPosition = "3,3,1107,-1,8,3,4,3,99"
+        execute(program: lessThanEightPosition, input: 8, output: &output)
+        XCTAssertEqual(output, 0)
+        execute(program: lessThanEightPosition, input: 2, output: &output)
+        XCTAssertEqual(output, 1)
+    }
+
+    func testPartTwoJump() {
+        var output = 0
+
+        let position = "3,12,6,12,15,1,13,14,13,4,13,99,-1,0,1,9"
+        execute(program: position, input: 5, output: &output)
+        XCTAssertEqual(output, 1)
+        execute(program: position, input: 0, output: &output)
+        XCTAssertEqual(output, 0)
+
+        let immediate = "3,3,1105,-1,9,1101,0,0,12,4,12,99,1"
+        execute(program: immediate, input: 5, output: &output)
+        XCTAssertEqual(output, 1)
+        execute(program: immediate, input: 0, output: &output)
+        XCTAssertEqual(output, 0)
+    }
+
+    func testPartTwoAnswer() {
+        var output = 0
+        execute(program: testInput, input: 5, output: &output)
+        XCTAssertEqual(output, 15508323)
     }
 
 }

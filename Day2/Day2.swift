@@ -27,7 +27,8 @@ public func process(opcodes: String, replacingMemoryWith values: (Int, Int)? = n
     }
 
     let program = returnValues.map(String.init).joined(separator: ",")
-    return execute(program: program)
+    var output = 0
+    return execute(program: program, input: 1, output: &output)
 }
 
 public func getInitialOpcodeValue(from opcodes: String) -> Int {

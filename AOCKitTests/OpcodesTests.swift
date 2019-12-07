@@ -13,6 +13,7 @@ import XCTest
 final class OpcodesTests: XCTestCase {
     func testImmediateMode() {
         let input = "1002,4,3,4,33"
-        execute(program: input)
+        var output = 0
+        XCTAssertEqual(execute(program: input, input: 1, output: &output), "")
     }
 }
